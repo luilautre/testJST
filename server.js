@@ -2,8 +2,8 @@ const path = require('path');
 const { creerApp } = require('@luilautre/jst');
 
 const app = creerApp({ 
-  racine: __dirname,        // variables.json ici
-  public: path.join(__dirname, 'public')  // fichiers servis ici
+  racine: path.resolve('./'),
+  public: path.resolve('./public')
 });
 
 module.exports = app;
