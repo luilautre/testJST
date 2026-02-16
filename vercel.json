@@ -1,5 +1,10 @@
 {
-  "builds": [{ "src": "server.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "server.js" }],
-  "includeFiles": ["variables.json", "public/**"]
+  "builds": [{ 
+    "src": "server.js", 
+    "use": "@vercel/node",
+    "config": {
+      "includeFiles": ["variables.json", "public/**"]
+    }
+  }],
+  "routes": [{ "src": "/(.*)", "dest": "server.js" }]
 }
