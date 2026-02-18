@@ -4,16 +4,9 @@ const { jstMiddleware } = require('@luilautre/jst');
 
 const app = express();
 
-const racine = path.resolve('./');
-const dossierPublic = path.join(racine, 'public');
-
 app.use(jstMiddleware({
-  racine: racine,
-  public: dossierPublic
+  racine: path.resolve('./'),
+  public: path.join(path.resolve('./'), 'public')
 }));
-
-app.use((req, res) => {
-  res.status(404).sendFile(path.join(dossierPublic, '404.html'));
-});
 
 module.exports = app;
