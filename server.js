@@ -7,6 +7,7 @@ const app = express();
 app.use(jstMiddleware({
   racine: path.resolve('./'),
   public: path.join(path.resolve('./'), 'public')
+  page404: 'index.html'
 }));
 
 module.exports = app;
