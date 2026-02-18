@@ -2,8 +2,9 @@
   "name": "testjst",
   "version": "1.0.0",
   "dependencies": {
-    "@luilautre/jst": "latest"
+    "@luilautre/jst": "1.1.3"
   }
 }
+
 
 
